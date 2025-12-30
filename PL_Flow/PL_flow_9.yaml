@@ -1,0 +1,36 @@
+# Loan Summary Page
+
+appId: "com.rupeek.customer.debug"
+---
+
+- tapOn:
+    point: "50%,92%"
+
+- assertVisible: "LOAN SUMMARY"
+- assertVisible: "Your total loan amount"
+
+# Documents
+- assertVisible: " KFS"
+- tapOn: " KFS"
+- assertVisible: "Download Key Fact Statement"
+- tapOn: "close_gray"
+
+
+- assertVisible: " Sanction Letter"
+- tapOn: " Sanction Letter"
+- assertVisible: "Download Sanction Letter"
+- tapOn: "close_gray"
+
+- assertVisible: " Loan Agreement"
+- tapOn: " Loan Agreement"
+- assertVisible: "Download Loan Agreement"
+- tapOn: "close_gray"
+
+
+- assertVisible: "I confirm the usage of money for personal use & allow Rupeek to check credit information and accept"
+- tapOn:
+    point: "7%,57%"
+
+
+- assertVisible: "Get Money now →"
+# - tapOn: "Get Money now →"

@@ -1,0 +1,11 @@
+# Transactions- UI Test Flow
+
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Transactions"
+- tapOn: 
+    text: "Expand"
+    index: 1
+
+
+- runFlow: "PL_flow_5.yaml"

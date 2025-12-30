@@ -1,0 +1,18 @@
+# Pay Now- UI Test Flow (Canara Bank)
+
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Pay Now"
+- tapOn: "Pay Now"
+
+
+
+- assertVisible: "Payment Options"
+- assertVisible: "Recommended"
+- assertVisible: "Canara Bank Netbanking"
+
+- runFlow: "PL_flow_6.yaml"
+# - tapOn: "Canara Bank Netbanking"
+
+
+

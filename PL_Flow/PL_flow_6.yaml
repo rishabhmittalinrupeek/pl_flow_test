@@ -1,0 +1,28 @@
+# Pay Now- UI Test Flow (All other Options)- General Flow
+
+appId: "com.rupeek.customer.debug"
+---
+# - assertVisible: "Pay Now"
+# - tapOn: "Pay Now"
+
+- assertVisible: "All Payment Options"
+
+
+- assertVisible: "UPI"
+- tapOn: "UPI"
+- tapOn: "Go Back"
+
+- assertVisible: "Cards"
+- tapOn: "Cards"
+- tapOn: "Go Back"
+
+- assertVisible: "Netbanking"
+- tapOn: "Netbanking"
+- tapOn:
+    point: "89%,45%"
+
+
+- assertVisible: "Wallet"
+- tapOn: "Wallet"
+- tapOn:
+    point: "89%,50%"

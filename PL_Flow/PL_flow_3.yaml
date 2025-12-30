@@ -1,0 +1,19 @@
+# Upcoming EMIs- UI Test Flow -> User has taken the loan
+
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Upcoming EMIs"
+- tapOn: "Upcoming EMIs"
+
+- assertVisible: "Previous EMIs"
+- tapOn: "Previous EMIs"
+
+- tapOn: "Upcoming EMIs"
+- assertVisible: "On-time payment help boost your credit score."
+
+- assertVisible: "Schedule EMIs"
+- tapOn: "Go Back"
+
+
+
+- runFlow: "PL_flow_4.yaml"

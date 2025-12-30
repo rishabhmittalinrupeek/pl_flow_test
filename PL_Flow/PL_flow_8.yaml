@@ -1,0 +1,15 @@
+# Bank Account Page
+
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Select Your Account"
+- assertVisible: "Verify Details"
+- assertVisible: "Email"
+- assertVisible: "Address"
+- assertVisible: "Update Details"
+
+- assertVisible: "Continue"
+- tapOn: "Continue"
+
+- runFlow: "PL_flow_9.yaml"
+

@@ -1,0 +1,35 @@
+# New Offer Dashboard-> Clicking the Borrow Button
+
+# Offer Page
+
+
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Pick your EMI plan"
+- assertVisible: "Recommended"
+
+# Slider UI Test- Amount Selection
+- swipe:
+    start: 20%, 25% 
+    end: 80%, 25%   
+    duration: 1000    
+
+- swipe: 
+    start: 80%, 25% 
+    end: 10%, 25%   
+    duration: 2000    
+
+
+# EMI Plan Selection
+- tapOn:
+    point: "15%,42%"
+
+# Terms and Conditions
+- assertVisible: "Terms of Use"
+- tapOn: "Terms of Use"
+
+- assertVisible: "Choose Your Bank Account"
+- tapOn: "Choose Your Bank Account"
+
+- runFlow: "PL_flow_8.yaml"
+
