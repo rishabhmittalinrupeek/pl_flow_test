@@ -1,16 +1,14 @@
 # Maestro_Testing_Framework
 
-
-Maestro_Testing_Framework 
-●​ Maestro is an open-source framework for mobile and web UI testing 
-●​ GitHub Repository: https://github.com/mobile-dev-inc/maestro 
-●​ Docs: https://docs.maestro.dev/ 
+- Maestro is an open-source framework for mobile and web UI testing 
+- GitHub Repository: https://github.com/mobile-dev-inc/maestro 
+- Docs: https://docs.maestro.dev/ 
 
 ## Setup 
 
 ### Prerequisite 
-Maestro requires Java 17 or higher to be installed on your system 
-Run: ```bash "java -version" ``` to check 
+- Maestro requires Java 17 or higher to be installed on your system 
+- Run: ```bash "java -version" ``` to check 
 
 ### Installation 
 
@@ -20,17 +18,16 @@ brew install maestro
 ```
 
 ### Connection 
-●​ “maestro test” will automatically detect and use any local emulator or USB connected 
+- “maestro test” will automatically detect and use any local emulator or USB connected 
 Physical Device. 
-
-●​ Run the Emulator on Android studio, install the QA application on emulator. 
+- Run the Emulator on Android studio, install the QA application on emulator. 
 
 ## Studio
 - maestro studio is a GUI tool to create and run test flows 
-Run: ```bash "maestro studio" ``` 
+- Run: ```bash "maestro studio" ``` 
 
 ## Flow Creation 
-Start simple in YAML and run it on an emulator or simulator 
+- Start simple in YAML and run it on an emulator or simulator 
 
 ```yaml
 # flow.yaml 
@@ -41,22 +38,20 @@ appId: your.app.id
 ```
 
 ```yaml
+# ex_rupeek.yaml
 appId: "com.rupeek.customer.debug" 
 --- 
 - launchApp 
 - assertVisible: "Get Started" 
 - tapOn: "Get Started" 
 ```
-Run: ```bash "maestro test flow.yaml" ``` 
+- Run: ```bash "maestro test flow.yaml" ``` 
 
-https://github.com/mobile-dev-inc/maestro
-https://docs.maestro.dev/
 
 
 ## E2E Testing via Maestro 
-●​ Maestro can cover both UI and API testing, ​​by combining these layers into a single 
+- Maestro can cover both UI and API testing, ​​by combining these layers into a single 
 end-to-end (E2E) workflow.
-
 
 ### Layer​ ​ Maestro's Approach 
 **UI (Apex)**​ Navigates the app/web like a real user using YAML.  
@@ -72,15 +67,15 @@ appId: com.example.app
 - assertVisible: ${output.userName}  # Check if UI matches API response 
 ```
 
-```javascript
-# fetchUserData.js 
+``` javascript
+// fetchUserData.js
 const response = http.get('https://api.example.com/user/123'); 
 output.userName = json(response.body).name; 
 ```
 
 
-●​ Maestro is best when the API test is directly serving a UI journey. 
-●​ http.get(url, headers) 
-●​ http.post(url, body, headers) 
-●​ json(response.body) 
-●​ output variable passes data from your API script back into UI YAML 
+- Maestro is best when the API test is directly serving a UI journey. 
+- http.get(url, headers) 
+- http.post(url, body, headers) 
+- json(response.body) 
+- output variable passes data from your API script back into UI YAML 
