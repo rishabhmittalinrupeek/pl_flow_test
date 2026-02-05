@@ -1,33 +1,26 @@
-# New Offer Dashboard Page
-# Offer Page
+# Bank Account Page
 
 appId: "com.rupeek.customer.debug"
 ---
-- assertVisible: "Pick your EMI plan"
-- assertVisible: "Recommended"
+- assertVisible: "Select Your Account"
 
-# Slider UI Test- Amount Selection
-- swipe:
-    start: 20%, 25% 
-    end: 80%, 25%   
-    duration: 1000    
-
-- swipe: 
-    start: 80%, 25% 
-    end: 10%, 25%   
-    duration: 2000    
-
-
-# EMI Plan Selection
+# Bank Account Addition
+- assertVisible: "+ Add Your Account"
 - tapOn:
-    point: "15%,42%"
+    text: "+ Add Your Account"
+- assertVisible: "Add Bank Account"
+- assertVisible: "Account Number"
+- assertVisible: "IFSC Code"
+- assertVisible: "Submit"
 
-# Terms and Conditions
-- assertVisible: "Terms of Use"
-- tapOn: "Terms of Use"
+# Details verification
+- assertVisible: "Verify Details"
+- assertVisible: "Email"
+- assertVisible: "Address"
+- assertVisible: "Update Details"
 
-- assertVisible: "Choose Your Bank Account"
-- tapOn: "Choose Your Bank Account"
+- assertVisible: "Continue"
+- tapOn: "Continue"
 
 - runFlow: "WD_flow_4.yaml"
 

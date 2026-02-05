@@ -5,8 +5,8 @@ appId: "com.rupeek.customer.debug"
 - assertVisible: "Upcoming EMIs"
 - tapOn: "Upcoming EMIs"
 
-- assertVisible: "Previous EMIs"
-- tapOn: "Previous EMIs"
+- assertVisible: "Paid EMIs"
+- tapOn: "Paid EMIs"
 
 - tapOn: "Upcoming EMIs"
 - assertVisible: "On-time payment help boost your credit score."

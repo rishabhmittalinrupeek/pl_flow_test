@@ -1,0 +1,1 @@
+- flow for users with no mandate setup

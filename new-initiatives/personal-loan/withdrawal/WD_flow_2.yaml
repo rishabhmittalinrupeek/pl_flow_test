@@ -1,10 +1,54 @@
-# Borrow Button, available to user with PL offer 
+# New Offer Dashboard Page
+# Offer Page
+
 appId: "com.rupeek.customer.debug"
 ---
+# Borrow Button, available to user with PL offer
 - runFlow:
-    when: 
-      assertVisible: "Borrow"
-    then:
-      tapOn: "Borrow"
+    when:
+      visible: "Borrow"
+    commands:
+      - tapOn: "Borrow"
+
+- assertVisible: "Pick your EMI plan"
+- assertVisible: "Recommended"
+
+# Slider UI Test- Amount Selection
+- assertVisible: "choose your loan amount"
+- swipe:
+    start: 20%, 25% 
+    end: 80%, 25%   
+    duration: 1000    
+
+- swipe: 
+    start: 80%, 25% 
+    end: 10%, 25%   
+    duration: 2000    
+
+
+# EMI Plan Selection
+- assertVisible:
+    text: "Details"
+    index: 0
+
+- tapOn:
+    point: "85%,44%"
+
+- assertVisible: "Transfer Amount"
+
+- tapOn:
+    point: "50%,50%"
+
+# EMI Plan
+- tapOn:
+    point: "15%,42%"
+
+# Terms and Conditions
+- assertVisible: "Terms of Use"
+- tapOn: "Terms of Use"
+
+- assertVisible: "Choose Your Bank Account"
+- tapOn: "Choose Your Bank Account"
 
 - runFlow: "WD_flow_3.yaml"
+

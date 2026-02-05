@@ -2,9 +2,6 @@
 
 appId: "com.rupeek.customer.debug"
 ---
-# - assertVisible: "Pay Now"
-# - tapOn: "Pay Now"
-
 - assertVisible: "All Payment Options"
 
 
@@ -18,6 +15,9 @@ appId: "com.rupeek.customer.debug"
 
 - assertVisible: "Netbanking"
 - tapOn: "Netbanking"
+- assertVisible:
+    text: "More Banks"
+    index: 0
 - tapOn:
     point: "89%,45%"
 

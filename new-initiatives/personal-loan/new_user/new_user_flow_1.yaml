@@ -1,0 +1,8 @@
+# Home Page
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible:
+    id: "com.rupeek.customer.debug:id/personal_loan_img"
+- tapOn:
+    id: "com.rupeek.customer.debug:id/personal_loan_img"
+

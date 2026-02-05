@@ -1,0 +1,5 @@
+appId: "com.rupeek.customer.debug"
+---
+- assertVisible: "Get Instant Personal Loan"
+- assertVisible: "Coin icon"
+
